@@ -1,2 +1,2 @@
-# unit-testing-practicing
+# Unit Testing Practicing
 Unit testing practicing project.
