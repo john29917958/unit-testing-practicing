@@ -1,28 +1,26 @@
-package tests.store;
+package classical.and.london.schools.of.testings;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
-import junit.framework.TestCase;
-import main.store.Customer;
-import main.store.Products;
-import main.store.Store;
-
-public class CustomerLondonStyleTests extends TestCase {
+public class CustomerLondonStyleTest {
     private Customer customer;
 
-    @Before
+    @BeforeEach
     public void setUp() {
-        this.customer = new Customer();
+        customer = new Customer();
     }
 
     @Test
     public void testPurchaseShouldSucceedWhenInventoryIsEnough() {
         Store store = Mockito.mock(Store.class);
         Mockito.when(store.hasEnoughInventory(Products.Shampoo, 5)).thenReturn(true);
-        boolean isPurchased = this.customer.purchase(store, Products.Shampoo, 5);
+        boolean isPurchased = customer.purchase(store, Products.Shampoo, 5);
         assertTrue(isPurchased);
         Mockito.verify(store, Mockito.times(1)).hasEnoughInventory(Products.Shampoo, 5);
     }
@@ -31,13 +29,13 @@ public class CustomerLondonStyleTests extends TestCase {
     public void testPurchaseShouldFailWhenInventoryIsNotEnough() {
         Store store = Mockito.mock(Store.class);
         Mockito.when(store.hasEnoughInventory(Products.Shampoo, 5)).thenReturn(false);
-        boolean isPurchased = this.customer.purchase(store, Products.Shampoo, 5);
+        boolean isPurchased = customer.purchase(store, Products.Shampoo, 5);
         assertFalse(isPurchased);
         Mockito.verify(store, Mockito.times(0)).removeInventory(Products.Shampoo, 5);
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
-        this.customer = null;
+        customer = null;
     }
 }

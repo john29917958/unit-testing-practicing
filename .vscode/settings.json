@@ -1,9 +1,3 @@
 {
-    "java.project.referencedLibraries": [
-        "lib/**/*.jar",
-        "classical-and-london-schools-of-testings-java/lib/byte-buddy-1.15.5.jar",
-        "classical-and-london-schools-of-testings-java/lib/byte-buddy-agent-1.15.5.jar",
-        "classical-and-london-schools-of-testings-java/lib/junit-platform-console-standalone-1.11.2.jar",
-        "classical-and-london-schools-of-testings-java/lib/mockito-core-5.14.2.jar"
-    ]
+    "java.compile.nullAnalysis.mode": "automatic"
 }

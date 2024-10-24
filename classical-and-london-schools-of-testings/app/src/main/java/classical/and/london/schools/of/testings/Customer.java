@@ -1,4 +1,4 @@
-package main.store;
+package classical.and.london.schools.of.testings;
 
 public class Customer {
     /**
