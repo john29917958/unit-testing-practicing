@@ -1,4 +1,4 @@
-package store;
+package main.store;
 
 /**
  * A product store.

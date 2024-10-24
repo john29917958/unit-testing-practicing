@@ -1,4 +1,4 @@
-package tests;
+package tests.store;
 
 import org.junit.After;
 import org.junit.Before;
@@ -6,9 +6,9 @@ import org.junit.Test;
 import org.mockito.Mockito;
 
 import junit.framework.TestCase;
-import store.Customer;
-import store.Products;
-import store.Store;
+import main.store.Customer;
+import main.store.Products;
+import main.store.Store;
 
 public class CustomerLondonStyleTests extends TestCase {
     private Customer customer;

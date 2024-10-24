@@ -1,4 +1,4 @@
-package store;
+package main.store;
 
 import java.util.Map;
 import java.util.HashMap;
